@@ -1,46 +1,37 @@
-# Astro Starter Kit: Basics
+# minisfha2
 
+Proyecto web construido con Astro.
+
+## Requisitos
+- Node.js `>=22.12.0`
+- Bun
+
+## Instalación
 ```sh
-bun create astro@latest -- --template basics
+bun install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+## Scripts disponibles
+```sh
+bun dev
+bun build
+bun preview
+bun astro -- --help
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Repositorio GitHub
+- SSH: `git@github.com:V1CMA-V/minisfha2.git`
+- URL: `https://github.com/V1CMA-V/minisfha2`
 
-## 🧞 Commands
+## Subir cambios por primera vez
+```sh
+git remote add origin git@github.com:V1CMA-V/minisfha2.git
+git branch -M main
+git push -u origin main
+```
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Si `origin` ya existe:
+```sh
+git remote set-url origin git@github.com:V1CMA-V/minisfha2.git
+git push -u origin main
+```

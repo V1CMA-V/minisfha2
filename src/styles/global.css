@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Color palette: Warm Cream (Minis FHA) === */
+  --color-bg: #FAF6EF;
+  --color-bg-alt: #F2EADD;
+  --color-bg-deep: #E9DECA;
+  --color-ink: #2A2018;
+  --color-ink-soft: #5C4A39;
+  --color-muted: #8B7560;
+  --color-line: #E0D2BB;
+  --color-brand: #8C5A3C;
+  --color-brand-deep: #5B3823;
+  --color-accent: #C97B5F;
+  --color-accent-soft: #E9B89F;
+  --color-gold: #B89968;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-deep: #128C7E;
+
+  /* === Typography === */
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+}
