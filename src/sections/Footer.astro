@@ -1,0 +1,72 @@
+---
+const year = new Date().getFullYear()
+---
+
+<footer class="bg-ink text-white/70 pt-20 pb-8">
+  <div class="max-w-[1240px] mx-auto px-[clamp(20px,5vw,64px)]">
+    <div class="grid gap-12 pb-14 border-b border-white/[0.12] grid-cols-1 sm:grid-cols-2 lg:[grid-template-columns:1.4fr_1fr_1fr_1fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="grid place-items-center w-11 h-11 rounded-full bg-accent text-white font-serif italic font-semibold text-[22px] -tracking-[0.04em] shadow-mark">
+            <span class="-translate-y-px">M</span>
+          </div>
+          <div class="flex flex-col leading-none">
+            <div class="font-serif text-[22px] font-semibold tracking-[0.02em] text-white">Minis FHA</div>
+            <div class="mt-1 text-[10px] font-semibold tracking-[0.22em] uppercase text-white/50">Adiestramiento Canino</div>
+          </div>
+        </div>
+        <p class="mt-5 text-sm leading-[1.65] max-w-[38ch] text-white/60">
+          Adiestramiento profesional de Schnauzers y perros de exposición en Puebla, México. Donde los campeones comienzan, desde 1999.
+        </p>
+        <div class="flex gap-2.5 mt-3.5">
+          {[
+            ['https://wa.me/', 'WhatsApp', `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>`],
+            ['https://facebook.com/', 'Facebook', `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-white"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>`],
+            ['https://instagram.com/', 'Instagram', `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-4 h-4 text-white"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>`],
+          ].map(([href, label, svg]) => (
+            <a href={href} aria-label={label} class="grid place-items-center w-[38px] h-[38px] rounded-full bg-white/5 border border-white/[0.12] transition-colors hover:bg-accent hover:border-accent" set:html={svg} />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-white text-base font-semibold tracking-[0.02em] mb-[18px]">Navegación</h4>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li><a href="#about" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Nosotros</a></li>
+          <li><a href="#services" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Servicios</a></li>
+          <li><a href="#why" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Por qué Minis</a></li>
+          <li><a href="#certifications" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Certificaciones</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-white text-base font-semibold tracking-[0.02em] mb-[18px]">Servicios</h4>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li><a href="#services" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Corrección de conductas</a></li>
+          <li><a href="#services" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Cursos a domicilio</a></li>
+          <li><a href="#services" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Programa 10 clases</a></li>
+          <li><a href="#services" class="text-sm text-white/65 transition-colors hover:text-accent-soft">Show & exposición</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-white text-base font-semibold tracking-[0.02em] mb-[18px]">Contacto</h4>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3 text-sm text-white/65">
+          <li>Puebla, México</li>
+          <li><a href="https://wa.me/" class="transition-colors hover:text-accent-soft">+52 222 000 0000</a></li>
+          <li><a href="mailto:hola@minisfha.com" class="transition-colors hover:text-accent-soft">hola@minisfha.com</a></li>
+          <li>Lun – Sáb · 9:00 – 19:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-between items-center gap-4 pt-8 text-[12.5px] text-white/50">
+      <div>© {year} Minis FHA. Todos los derechos reservados.</div>
+      <div class="flex flex-wrap gap-6">
+        <a href="#" class="text-white/50 transition-colors hover:text-white">Aviso de Privacidad</a>
+        <a href="#" class="text-white/50 transition-colors hover:text-white">Términos y Condiciones</a>
+        <a href="#" class="text-white/50 transition-colors hover:text-white">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

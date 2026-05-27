@@ -1,0 +1,35 @@
+---
+const items = [
+  { mono: 'FCI', tag: 'Internacional', title: 'Federación Cinológica Internacional', desc: 'Organismo mundial que regula estándares de raza y competiciones oficiales en más de 100 países.' },
+  { mono: 'FCM', tag: 'Nacional', title: 'Federación Canófila Mexicana', desc: 'Asociación oficial mexicana afiliada a la FCI. Registro genealógico y eventos avalados.' },
+  { mono: 'VMP', tag: 'Aliado local', title: 'Vive Mejor Puebla', desc: 'Alianza local en bienestar animal y educación responsable de mascotas en la región.' },
+]
+---
+
+<section id="certifications" class="bg-bg-alt border-y border-line py-[clamp(60px,8vw,100px)]">
+  <div class="max-w-[1240px] mx-auto px-[clamp(20px,5vw,64px)]">
+    <div class="text-center mb-14">
+      <span class="inline-flex items-center justify-center gap-2.5 text-[12px] font-semibold tracking-[0.18em] uppercase text-accent before:content-[''] before:w-7 before:h-px before:bg-accent before:inline-block">
+        Avales y Certificaciones
+      </span>
+      <h2 class="mt-4 mx-auto max-w-[22ch] text-[clamp(28px,3vw,40px)]">
+        Respaldados por las instituciones más reconocidas de cinotecnia.
+      </h2>
+    </div>
+
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-3">
+      {items.map((it) => (
+        <div class="flex flex-col items-center gap-[18px] py-10 px-8 text-center bg-bg border border-line rounded-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+          <div class="grid place-items-center w-[84px] h-[84px] rounded-full bg-bg-alt border-[1.5px] border-gold">
+            <span class="font-serif font-semibold text-[26px] tracking-[0.02em] text-brand-deep">{it.mono}</span>
+          </div>
+          <div class="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.18em] uppercase text-muted before:content-[''] before:w-5 before:h-px before:bg-muted before:inline-block">
+            {it.tag}
+          </div>
+          <h4 class="font-serif text-[20px] font-semibold text-ink leading-tight">{it.title}</h4>
+          <p class="text-[13.5px] text-ink-soft leading-[1.55]">{it.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

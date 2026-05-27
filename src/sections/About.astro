@@ -1,0 +1,44 @@
+---
+import aboutImg from '@/assets/imgs/about.webp'
+---
+
+<section id="about" class="relative bg-bg py-[clamp(80px,10vw,140px)]">
+  <div class="max-w-[1240px] mx-auto px-[clamp(20px,5vw,64px)]">
+    <div class="grid items-center gap-[clamp(40px,7vw,100px)] grid-cols-1 md:[grid-template-columns:1.1fr_1fr]">
+      <div>
+        <span class="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.18em] uppercase text-accent before:content-[''] before:w-7 before:h-px before:bg-accent before:inline-block">
+          Nuestra Historia
+        </span>
+        <h2 class="mt-5 mb-6 max-w-[18ch]">
+          Más de dos décadas formando <em class="italic font-normal text-accent">vínculos</em> que duran toda la vida.
+        </h2>
+        <p class="text-[18px] leading-[1.65] text-ink-soft max-w-[52ch] mb-9">
+          Minis FHA nació en Puebla con una convicción simple: cada perro merece ser comprendido. Hoy, después de 25 años, somos referente nacional en la educación de Schnauzers y la preparación de ejemplares para exposición canina, combinando ciencia, técnica y un profundo respeto por la conducta natural del perro.
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-line">
+          {[
+            ['+1,200', 'Familias', 'atendidas'],
+            ['+180', 'Campeonatos', 'obtenidos'],
+            ['100%', 'Refuerzo', 'positivo'],
+          ].map(([n, l1, l2]) => (
+            <div>
+              <div class="font-serif text-[40px] leading-none font-medium text-brand">{n}</div>
+              <div class="mt-2 text-[12px] tracking-[0.16em] uppercase text-muted leading-[1.4]">{l1}<br />{l2}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-elev after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:pointer-events-none after:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)]">
+        <img src={aboutImg.src} alt="Schnauzer en sesión de adiestramiento" class="w-full h-full object-cover" />
+        <div class="absolute -left-7 bottom-12 flex items-center gap-4 min-w-[240px] py-[22px] px-7 rounded-card bg-bg text-ink shadow-elev">
+          <div class="font-serif text-[48px] leading-none font-semibold text-brand">25+</div>
+          <div class="text-[13px] text-ink-soft leading-[1.35]">
+            <strong class="block font-semibold text-ink text-sm mb-0.5">Años de experiencia</strong>
+            En Puebla, México
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
